@@ -1,0 +1,26 @@
+@import url(/Css/style.css);
+
+.form {
+    width: 100%;
+    max-width: 650px;
+    padding: 50px 30px 70px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form input {
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #ccc;
+    background: black;
+}
