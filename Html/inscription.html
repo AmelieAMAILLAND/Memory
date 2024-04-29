@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/inscription.css">
+    <script src="/JavaScript/script.js" defer></script>
+    <title>Inscription</title>
+</head>
+<body>
+        <header>
+            <nav>
+                <h1>Memory</h1>
+                <div class="navbar">
+                    <p><a href="/Html/index.html">Accueil</a></p>
+                    <p><a href="/Html/inscription.html">S'inscrire</a></p>
+                    <p><a href="/Html/connection.html">Se connecter</a></p>
+                    <p><a href="/Html/profil.html">Profil</a></p>
+                    <p><a href="/Html/jouer.html">Jouer</a></p>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <form id="contactForm" class="form">
+                <h2>Inscrivez-vous.</h2>
+
+                <label for="userName">Nom d'utilisateur:</label>
+                <input id="userName" class="input" placeholder="3 caractères minimum"/>
+                <div class="message erreur" id="erreur-userName"></div>
+
+                <label for="mail">Entrez votre mail</label>
+                <input id="mail" class="input" placeholder="Votre email" />
+                <div class="message erreur" id="erreur-userName"></div>
+
+                <label for="passWord">Mot de passe</label>
+                <input id="passWord" class="input" placeholder="Votre mot de passe" />
+                <div class="message erreur" id="erreur-userName"></div>
+
+                <label for="passWord2">Confirmez le mot de passe</label>
+                <input id="passWord2" class="input" placeholder="Confirmez le mot de passe" />
+                <div class="message erreur" id="erreur-userName"></div>
+
+            </form>
+
+        </div>
+    
+</body>
+</html>

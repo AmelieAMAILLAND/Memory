@@ -3,45 +3,53 @@
     margin: 0; /* Réinitialise la marge de tous les éléments à 0 */
     padding: 0; /* Réinitialise le padding de tous les éléments à 0 */
     box-sizing: border-box; /* Modifie la méthode de calcul de la largeur et de la hauteur des éléments pour inclure le padding et la bordure sans affecter la taille totale de l'élément */
+    font-family: "Poppins", sans-serif;
+    color: white;
 }
+
+header {
+    background: linear-gradient(#13181d, #20212e, #341b47);
+}
+
+header nav {
+    padding: 15px 5% 15px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header nav h1 {
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+}
+
+header nav .navbar {
+    display: flex;
+    align-items: center;
+}
+header nav .navbar p {
+    margin: 0 15px 0 0;
+    color: #ccc;
+    cursor: pointer;
+}
+
+header nav .navbar p:hover {
+    color: white;
+}
+
 
 .container {
     width: auto; /* Ajustement de la largeur à 100% */
-    margin: 0; /* Correction de la marge */
+    margin: 0px; /* Correction de la marge */
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f); /* background = fond d'écran >>> linear-gradient = création du dégradé entre les deux couleur à 135 degrés.*/
-    padding: 10px;
-}
-
-.reception {
-    width: 100%;
-    max-width: 1000px;
-    background: #ffffff;
-    margin: 100px auto 20px;
-    padding: 50px 30px 70px;
-    border-radius: 10px;
-    
-}
-
-.reception img {
-    display: block;
-    position: relative;
-    width: 450px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    background: linear-gradient(135deg,#341b47,#20212e,#13181d); /* background = fond d'écran >>> linear-gradient = création du dégradé entre les deux couleur à 135 degrés.*/
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-ul li::before {
-    content: "";
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    background-image: url(/images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-}
