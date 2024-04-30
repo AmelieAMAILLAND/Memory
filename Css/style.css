@@ -7,13 +7,21 @@
     color: white;
 }
 
-header {
-    background: linear-gradient(#13181d, #20212e, #341b47);
+/*Styles du corps de la page */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4f296b, #5b62c2, #13181d);
 }
 
 header nav {
     padding: 15px 5% 15px 5%;
     display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -40,16 +48,16 @@ header nav .navbar p:hover {
     color: white;
 }
 
-
+/* Style du container */
 .container {
     width: auto; /* Ajustement de la largeur à 100% */
-    margin: 0px; /* Correction de la marge */
-    min-height: 100vh;
-    background: linear-gradient(135deg,#341b47,#20212e,#13181d); /* background = fond d'écran >>> linear-gradient = création du dégradé entre les deux couleur à 135 degrés.*/
+    height: auto;
+    margin: 0 auto; /* Correction de la marge */
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 
