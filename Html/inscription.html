@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Css/inscription.css">
-    <script src="/JavaScript/script.js" defer></script>
+    <script type="module" src="/JavaScript/Inscription/inscription.js" defer></script>
     <title>Inscription</title>
 </head>
 <body>
@@ -25,22 +25,23 @@
             <form id="contactForm" class="form">
                 <h2>Inscrivez-vous.</h2>
 
-                <label for="userName">Nom d'utilisateur:</label>
-                <input id="userName" class="input" placeholder="3 caractères minimum"/>
-                <div class="message erreur" id="erreur-userName"></div>
+                <label for="userName">Nom d'utilisateur :</label>
+                <input id="userName" class="input" placeholder="Votre nom d'utilisateur" />
+                <input id="messageName" class="message" placeholder="Le nom d'utilisateur ne peut pas être vide.">
 
-                <label for="mail">Entrez votre mail</label>
+                <label for="mail">Entrez votre mail : </label>
                 <input id="mail" class="input" placeholder="Votre email" />
-                <div class="message erreur" id="erreur-userName"></div>
+                <input id="messageMail" class="message" placeholder="Le mail utilisateur ne peut pas être vide.">
 
-                <label for="passWord">Mot de passe</label>
-                <input id="passWord" class="input" placeholder="Votre mot de passe" />
-                <div class="message erreur" id="erreur-userName"></div>
+                <label for="password">Mot de passe</label>
+                <input id="password" class="input" placeholder="Votre mot de passe" />
+                <input id="messagePassword" class="message" placeholder="Le mot de passe utilisateur ne peut pas être vide.">
 
-                <label for="passWord2">Confirmez le mot de passe</label>
-                <input id="passWord2" class="input" placeholder="Confirmez le mot de passe" />
-                <div class="message erreur" id="erreur-userName"></div>
-
+                <label for="password2">Confirmez le mot de passe</label>
+                <input id="password2" class="input" placeholder="Confirmez le mot de passe" />
+                <input id="messagePassword2" class="message" placeholder="">
+                
+                <button type="submit" class="btn">Enregistrer</button>
             </form>
 
         </div>
