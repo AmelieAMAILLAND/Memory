@@ -24,3 +24,21 @@
     border-bottom: solid #ccc;
     background: black;
 }
+
+.form input:focus {
+    outline: none;
+}
+
+input.message{
+    border: none;
+}
+
+
+.error::placeholder {
+    color: red;
+}
+
+.valid::placeholder{
+    color: green;
+}
+

@@ -20,13 +20,15 @@ let doubleFront = frontCards.concat(frontCards); // concat fusionne les tableaux
 // Fonction qui mélange les cartes.
 doubleFront.sort(() => Math.random() - 0.5);
 
+console.log(doubleFront + "Mélange 1")
+
 //implémenter
 doubleFront.forEach(image => {
     const memoryCard = document.createElement("div");
     memoryCard.classList.add("memory-card");
     memoryGame.appendChild(memoryCard); // Ajoute la div à la section.
 
-    const frontFace = document.createElement("img");
+    let frontFace = document.createElement("img");
     frontFace.src = image;
     frontFace.alt = "Front face";
     frontFace.classList.add("front-face");
@@ -40,14 +42,16 @@ doubleFront.forEach(image => {
 })
 
 const memoryCards = document.querySelectorAll(".memory-card");
-console.log(memoryCards)
 
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 let foundPairs = 0;
+let notFoundPairs = 0
+let tentatives = 0 
 
 function flipCard(){
+    console.log("coucou")
     if (lockBoard) return; // Ne rien faire si le tableau est verrouillé
 
     this.classList.add("flip");
@@ -72,32 +76,65 @@ function match() {
         secondCard.removeEventListener("click", flipCard);
 
         foundPairs = foundPairs + 1
+        
 
         // Vérifier si toutes les paires sont trouvées
-        if (foundPairs === doubleFront.length/2) {
-            alert ("Vous avez gagné.")
+        if (foundPairs === 2 /*foundPairs/2*/) {
+            tentatives = foundPairs + notFoundPairs
+            setTimeout(() => {
+                alert ("Bravo, vous avez gagné en " + tentatives + " tentatives.")
+            }, 1000);
+            
         }
 
     } 
     else {
         // Pas de correspondance
         lockBoard = true; // Verrouiller le tableau pendant la vérification
+        notFoundPairs = notFoundPairs + 1
         setTimeout(() => {
             firstCard.classList.remove("flip");
             secondCard.classList.remove("flip");
             lockBoard = false; // Déverrouiller le tableau après avoir retourné les cartes
-        }, 1000);
+        }, 1000 /*5000*/);
     }
 }
 
-// Retourne et vérifie les cartes 
+// Retourne et vérifie les cartes
 memoryCards.forEach(card => card.addEventListener("click", flipCard))
 
+//Reset game
+const playAgain = document.getElementById("playAgain");
+
+document.addEventListener("keydown", function(event){
+    // Est-ce la barre d'espace est pressée ? 
+    if (event.code === "Space") {
+        if (foundPairs >= 1) {
+        //Retourner toutes les paires trouvées
+        memoryCards.forEach(card => card.classList.remove("flip"))
+
+        // Réinitialiser le compteur à 0
+        foundPairs = 0;
+
+        setTimeout(() => {
+            // Mélanger les cartes
+            doubleFront.sort(() => Math.random() - 0.5);
+            console.log(doubleFront + "Mélange 2")
+
+            // Remplacer les élements
+            memoryCards.forEach((card, index) => {
+            card.querySelector(".front-face").src = doubleFront[index];
+            });
+        }, 1000);
+
+        // Reboucler
+        memoryCards.forEach(card => card.addEventListener("click", flipCard));
+        
+        }
+    }
+})
 
 /***
- *  A Faire > Réussir à reset le jeu avec le bouton reset
- * const reset = document.getElementById("reset");
- * 
  * A Faire > optimiser avec des fonctions si possible (à réfléchir)
  * 
  * A Faire > séparer l'init des cartes dans un fichier exprès pour ça.

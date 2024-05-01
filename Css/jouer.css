@@ -43,21 +43,3 @@
     transform: rotateY(180deg);
 }
 
-#reset {
-    width: 280px;
-    height: 50px;
-    position: absolute;
-    top: -70px;
-    right: 40px;
-    color: beige;
-    background-color: #916ce6;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-#reset:hover {
-    background-color: #0056b3;
-}
-
-
