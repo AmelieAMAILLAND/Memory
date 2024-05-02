@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="/Css/profil.css">
+    <script type="module" src="/JavaScript/Profil/profil.js" defer></script>
     <title>Profil</title>
 </head>
 <body>
@@ -11,21 +12,26 @@
             <nav>
                 <h1>Memory</h1>
                 <div class="navbar">
-                    <p><a href="/Html/index.html">Accueil</a></p>
-                    <p><a href="/Html/inscription.html">S'inscrire</a></p>
-                    <p><a href="/Html/connexion.html">Se connecter</a></p>
-                    <p><a href="/Html/profil.html">Profil</a></p>
                     <p><a href="/Html/jouer.html">Jouer</a></p>
+                    <p><a href="/Html/RegleJeu.html">Règle du jeu</a></p>
+                    <p><a href="/Html/index.html">Déconnexion</a></p>
                 </div>
             </nav>
         </header>
 
         <div class="container">
             <div class="container2">
-        
-        
+                <h2 class="titre2">Information de profil</h2>
+                <br>
+                <div id="profil-info">
+                    <p><b>Nom utilisateur : </b><span id="userName"> </span></p>
+                    <br>
+                    <p><b>Email utilisateur : </b><span id="userMail"> </span></p>
+                </div>
+
+
+
             </div>
-        
         </div>
     
 </body>
