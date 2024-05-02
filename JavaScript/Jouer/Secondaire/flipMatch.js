@@ -1,5 +1,7 @@
+import { saveScore } from "../../storage/storageLS.js";
 import { doubleFront } from "./doublerCartes.js";
 import { implementation } from "./implementationDOM.js";
+
 
 implementation()
 
@@ -41,6 +43,9 @@ function match () {
     // Vérifier si toutes les paires sont trouvées
         if (foundPairs === 2) {
             tentatives = foundPairs + notFoundPairs
+            
+            saveScore("users", tentatives)
+
             setTimeout(() => {
                 alert ("Bravo, vous avez gagné en " + tentatives + " tentatives.")
             }, 1000);
@@ -93,4 +98,4 @@ function reset() {
 }
 
 
-export{flipCard, reset}
+export{flipCard, reset, saveScore}

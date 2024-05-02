@@ -17,4 +17,35 @@
     margin-right: auto;
     border-radius: 10px;
 }
+/* Style général du tableau*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
+/*Style de l'en-tête*/
+th {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*Style des cellules du tableau*/
+td {
+    border: 1px;
+    text-align: center;
+    padding: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+/*Style des lignes paires du tableau*/
+tr:nth-child(even) {
+    background-color: lightskyblue;
+}
+
+/*Style des lignes impaires*/
+tr:nth-child(odd) {
+    background-color: lightblue ;
+}

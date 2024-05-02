@@ -14,7 +14,16 @@ function getUsers(key) {
     else {
         return [] // Sinon, renvoi un tableau vide.
     }
-    
 }
 
-export {saveUser, getUsers} //Exporte les fonctions pour une utilisation dans un autre fichier.
+
+function saveScore(key,score) {
+        let userLogged = JSON.parse(sessionStorage.getItem("user"));
+        let users = getUsers(key);
+        let userIndex = users.findIndex(user => ((user.name === userLogged.name) || (user.email === userLogged.email)))
+        users[userIndex].score.push(score);
+        localStorage.setItem(key, JSON.stringify(users));
+}
+
+
+export {saveUser, getUsers, saveScore} //Exporte les fonctions pour une utilisation dans un autre fichier.

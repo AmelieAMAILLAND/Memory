@@ -34,7 +34,8 @@ submit.addEventListener("click", function(event){
             let user = {
             "name": document.getElementById("userName").value,
             "email": document.getElementById("mail").value,
-            "password": document.getElementById("password").value
+            "password": document.getElementById("password").value,
+            "score": []
         }
 
         saveUser("users", user);

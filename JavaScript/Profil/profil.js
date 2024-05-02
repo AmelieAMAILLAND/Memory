@@ -1,4 +1,5 @@
 import { getUser } from "../storage/storageSdS.js";
+import { tableauScore } from "../Profil/score.js";
 
 function inputInformation () {
     let userName = document.getElementById("userName");
@@ -10,4 +11,4 @@ function inputInformation () {
 }
 
 inputInformation();
-
+tableauScore()
