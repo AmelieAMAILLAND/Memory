@@ -25,23 +25,24 @@
             <form id="contactForm" class="form">
                 <h2>Inscrivez-vous.</h2>
 
-                <label for="userName">Nom d'utilisateur :</label>
-                <input id="userName" class="input" placeholder="Votre nom d'utilisateur" />
-                <input id="messageName" class="message" placeholder="Le nom d'utilisateur ne peut pas être vide.">
-
-                <label for="mail">Entrez votre mail : </label>
-                <input id="mail" class="input" placeholder="Votre email" />
-                <input id="messageMail" class="message" placeholder="Le mail utilisateur ne peut pas être vide.">
-
-                <label for="password">Mot de passe</label>
-                <input id="password" class="input" placeholder="Votre mot de passe" />
-                <input id="messagePassword" class="message" placeholder="Le mot de passe utilisateur ne peut pas être vide.">
-
-                <label for="password2">Confirmez le mot de passe</label>
-                <input id="password2" class="input" placeholder="Confirmez le mot de passe" />
-                <input id="messagePassword2" class="message" placeholder="">
+                <label for="userName">Nom d'utilisateur : <span id="messageName" class="message"></span> </label>
+                <input id="userName" class="input" placeholder="Votre nom d'utilisateur" required/>
                 
-                <button type="submit" class="btn">Enregistrer</button>
+
+                <label for="mail">Entrez votre mail : <span id="messageMail" class="message"></span></label>
+                <input id="mail" class="input" placeholder="Votre email" required/>
+
+                <label for="password">Mot de passe : <span id="messagePassword" class="message"></span></label>
+                <input id="password" class="input" placeholder="Votre mot de passe" required/>
+
+                <label for="password2">Confirmez le mot de passe <span id="messagePassword2" class="message"></span></label>
+                <input id="password2" class="input" placeholder="Confirmez le mot de passe" required/>
+                
+                <div class="submit">
+                    <input id="submit" type="submit" value="Enregistrer" type="reset" action="/Html/connexion.html"/>
+                </div>
+                
+                
             </form>
 
         </div>

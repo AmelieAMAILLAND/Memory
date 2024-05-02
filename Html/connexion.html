@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="/Css/connexion.css">
+    <script type="module" src="/JavaScript/Connexion/connexion.js" defer></script>
     <title>connexion</title>
 </head>
 <body>
@@ -21,10 +22,21 @@
         </header>
     
         <div class="container">
-            <div class="container2">
+            <form id="contactForm" class="form">
+                <h2>Connectez-vous</h2>
         
+                <label for="user">Identifiant : </label>
+                <input id="user" class="input" placeholder="Nom d'utilisateur ou email" required />
         
-            </div>
+                <label for="password">Mot de passe :</label>
+                <input id="password" class="input" placeholder="Votre mot de passe" required />
+        
+                <div class="submit">
+                    <input id="submit" type="submit" value="Connecter" action="/Html/jouer.html" type="reset"/>
+                    <span id="message" class="message"></span>
+                </div>
+        
+            </form>
         
         </div>
 </body>

@@ -25,13 +25,11 @@
     background: black;
 }
 
-
-
 .form input:focus {
     outline: none;
 }
 
-span.message{
+span.message {
     border: none;
 }
 
@@ -39,7 +37,7 @@ span.message{
     color: red;
 }
 
-.valid{
+.valid {
     color: green;
 }
 
@@ -47,7 +45,7 @@ span.message{
     width: 150px;
     height: 50px;
     border-top: solid violet;
-    border-left: solid violet ;
+    border-left: solid violet;
     border-right: solid violet;
     border-bottom: solid violet;
     background-color: blue;

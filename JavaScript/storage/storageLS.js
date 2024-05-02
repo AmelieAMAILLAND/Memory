@@ -1,10 +1,9 @@
-
 /** MANIPULATION DES DONNEES DU LOCAL STORAGE **/
 
 function saveUser(key, user) {
     let users = getUsers(key); //Récupère les utilisateurs existants.
     users.push(user); //Ajouter le nouvel utilisateur.
-    localStorage.setItem(key, JSON.stringify(user)); //Stock le tableau dans le localStorage
+    localStorage.setItem(key, JSON.stringify(users)); //Stock le tableau dans le localStorage
 }
 
 function getUsers(key) {
